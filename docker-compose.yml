@@ -1,5 +1,6 @@
 services:
   epg:
-    image: "iptvorgepgdocker:latest"
+    image: "iptv-org-epg-docker:latest"
+    container_name: iptv-org-epg
     ports:
-      - "9000:3000"
+      - "3000:3000"
