@@ -4,13 +4,13 @@ var cron = require("node-cron");
 const execute = () => {
   console.log("Grabbing epg...");
   try {
-    execSync("SITE=tvpassport.com npm run grab", {
+    execSync("SITE=plex.tv npm run grab", {
       stdio: "inherit",
       cwd: "/usr/src/app",
     });
   } catch (error) {
     console.error(
-      "something went wrong while grabbing epg from tvpassport.com",
+      "something went wrong while grabbing epg from plex.tv",
       error
     );
   }
