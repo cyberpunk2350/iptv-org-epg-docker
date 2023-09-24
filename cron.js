@@ -28,7 +28,7 @@ const execute = () => {
   }
   
   try {
-    execSync("SITE=i.mjh.nz_pluto npm run grab", {
+    execSync("SITE=i.mjh.nz/pluto npm run grab", {
       stdio: "inherit",
       cwd: "/usr/src/app",
     });
