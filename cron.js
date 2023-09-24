@@ -27,7 +27,7 @@ const execute = () => {
     );
   }
   
-    try {
+  try {
     execSync("SITE=i.mjh.nz_pluto npm run grab", {
       stdio: "inherit",
       cwd: "/usr/src/app",
@@ -47,6 +47,17 @@ const execute = () => {
   } catch (error) {
     console.error(
       "something went wrong while grabbing epg from tvguide.com",
+      error
+    );
+  }
+    try {
+    execSync("SITE=tvpassport.com npm run grab", {
+      stdio: "inherit",
+      cwd: "/usr/src/app",
+    });
+  } catch (error) {
+    console.error(
+      "something went wrong while grabbing epg from tvpassport.com",
       error
     );
   }
